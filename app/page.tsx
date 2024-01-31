@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Wrapper className="bg-primary text-white">
+      <Wrapper className="bg-primary text-white overflow-x-hidden">
         <div className="mb-32 flex flex-col justify-centeri items-center z-[4] relative">
           <h1 className="font-ginto text-2xl mb-4 lg:mb-8 md:text-6xl md:text-center">
             IMAGINE A PLACE...
