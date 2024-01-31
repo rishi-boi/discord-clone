@@ -1,6 +1,35 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "@next/font/local";
+
+const ginto = localFont({
+  src: [
+    {
+      path: "../public/fonts/ginto.otf",
+      weight: "normal",
+    },
+  ],
+  variable: "--font-ginto",
+});
+
+const ggSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/gg sans Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/gg sans Regular.ttf",
+      weight: "normal",
+    },
+    {
+      path: "../public/fonts/gg sans Bold.ttf",
+      weight: "bold",
+    },
+  ],
+  variable: "--font-ggsans",
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +45,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} ${ginto.variable} ${ggSans.variable} font-ggsans`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

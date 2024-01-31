@@ -13,8 +13,26 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        ginto: ["var(--font-ginto)"],
+        ggsans: ["var(--font-ggsans)"],
+      },
+      colors: {
+        "not-quite-black": "#23272a",
+        "not-quite-black-hover": "#313339",
+        primary: "#404EED",
+        "primary-text": "#5865F2",
+        "primary-hover": "#7389DA",
+        navbar: "#787878",
+        bg: "#F6F6F6",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };
 export default config;
