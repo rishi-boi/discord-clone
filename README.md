@@ -28,6 +28,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Live Demo https://discord-clone-lmk73gfy8-rishibois-projects.vercel.app/
 
 ## Responsive Design
 ![Responsive](https://github.com/rishi-boi/discord-clone/assets/112169204/7ff37e66-d351-41af-841f-f2c7d305be26)
