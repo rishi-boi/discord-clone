@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import type { PluginCreator } from "tailwindcss/types/config";
+import type { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -29,7 +29,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addVariant }: { addVariant: PluginCreator<any> }) {
+    function ({ addVariant }: PluginAPI) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
     },
