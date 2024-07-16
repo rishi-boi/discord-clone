@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import type { PluginCreator } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -10,8 +11,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
         ginto: ["var(--font-ginto)"],
@@ -29,7 +29,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addVariant }) {
+    function ({ addVariant }: { addVariant: PluginCreator<any> }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
     },
